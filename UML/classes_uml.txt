@@ -1,0 +1,59 @@
+@startuml
+class Asteroid {
+    to_dict()
+        composition
+    __init__()
+}
+CelestialBody <|-- Asteroid
+
+class CelestialBody {
+    update_position()
+    draw()
+        name
+    type
+    mass
+    position
+    velocity
+    color
+    radius
+    position
+    __init__()
+}
+
+class Comet {
+    to_dict()
+        tail_length
+    __init__()
+}
+CelestialBody <|-- Comet
+
+class Moon {
+    to_dict()
+        parent_planet
+    __init__()
+}
+CelestialBody <|-- Moon
+
+class Planet {
+    to_dict()
+        atmosphere
+    surface
+    __init__()
+}
+CelestialBody <|-- Planet
+
+class Spacecraft {
+    to_dict()
+        mission
+    __init__()
+}
+CelestialBody <|-- Spacecraft
+
+class Star {
+    to_dict()
+        temperature
+    __init__()
+}
+CelestialBody <|-- Star
+@enduml
+
